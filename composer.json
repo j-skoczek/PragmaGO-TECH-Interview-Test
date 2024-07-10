@@ -9,18 +9,18 @@
             "PragmaGoTech\\Interview\\Tests\\": "tests/"
         }
     },
-    "require": {
-        "squizlabs/php_codesniffer": "*",
-        "friendsofphp/php-cs-fixer": "*"
-    },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*",
+        "friendsofphp/php-cs-fixer": "*",
+        "phpstan/phpstan": "*"
     },
     "scripts": {
         "test": "phpunit tests/",
         "lint": "phpcs --standard=PSR12 -n src/",
         "lint-include-warnings": "phpcs --standard=PSR12 src/",
         "lint-fix": "phpcbf --standard=PSR12 -n src/",
-        "lint-fix-tests": "phpcbf --standard=PSR12 -n tests/"
+        "lint-fix-tests": "phpcbf --standard=PSR12 -n tests/",
+        "phpstan": "vendor/bin/phpstan analyse src tests --level max"
     }
 }

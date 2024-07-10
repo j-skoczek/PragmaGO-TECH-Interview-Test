@@ -16,7 +16,7 @@ final class FeeCalculatorTest extends TestCase
     /**
      * @param int $interpolationResult
      * @param int[] $closestValues
-     * 
+     *
      * @return FeeCalculator
      */
     protected function getCalculator(int $interpolationResult, array $closestValues): FeeCalculator
@@ -30,6 +30,12 @@ final class FeeCalculatorTest extends TestCase
 
     /**
      * @dataProvider calculateFeeProvider
+     *
+     * @param LoanProposal $loanProposal
+     * @param FeeRule[] $feeRules
+     * @param int $interpolationResult
+     * @param int[] $closestValues
+     * @param int $expectedFee
      */
     public function testCalculateFee(
         LoanProposal $loanProposal,
@@ -37,7 +43,7 @@ final class FeeCalculatorTest extends TestCase
         int $interpolationResult,
         array $closestValues,
         int $expectedFee
-    ) {
+    ): void {
         $calculator = $this->getCalculator($interpolationResult, $closestValues);
         $actualFee = $calculator->calculateFee($loanProposal, $feeRules);
         $this->assertEquals($expectedFee, $actualFee);

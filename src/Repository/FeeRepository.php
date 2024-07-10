@@ -12,12 +12,14 @@ class FeeRepository implements FeeRepositoryInterface
     const FEE_SEPARATOR = ':';
     const TWELVE_MONTH_FEES_PATH = '/src/Resources/12-month-fees.txt';
     const TWENTY_FOUR_MONTH_FEES_PATH = '/src/Resources/24-month-fees.txt';
-    const EXCEPTION_MESSAGE = 'incorrect formatting';
+    const FORMATTING_EXCEPTION = 'incorrect formatting';
+    const TERM_EXCEPTION = 'incorrect term';
+    const NO_FILE_EXCEPTION = 'no file was found';
 
     /**
      * Read fee rules from file
      *
-     * @param int $loadTerm
+     * @param int $loanTerm
      *
      * @return FeeRule[] array of fee rules with loan amount as keys
      */
@@ -36,15 +38,16 @@ class FeeRepository implements FeeRepositoryInterface
     /**
      * Read file containing fee rules
      *
-     * @param int $loadTerm
+     * @param int $loanTerm
      *
-     * @return array lines from pre-formatted  file
+     * @return array<int, string> lines from pre-formatted file
      */
     protected function readFeeRulesFile(int $loanTerm): array
     {
         $filePath = match ($loanTerm) {
             12 => self::TWELVE_MONTH_FEES_PATH,
-            24 => self::TWENTY_FOUR_MONTH_FEES_PATH
+            24 => self::TWENTY_FOUR_MONTH_FEES_PATH,
+            default => throw new Exception(self::TERM_EXCEPTION)
         };
         return file(getcwd() . $filePath);
     }
@@ -64,7 +67,7 @@ class FeeRepository implements FeeRepositoryInterface
         $line = str_replace('PLN', '', $line);
         $feeRule = explode(self::FEE_SEPARATOR, $line);
         if (sizeof($feeRule) <= 1 || sizeof($feeRule) >= 3) {
-            throw new Exception(self::EXCEPTION_MESSAGE);
+            throw new Exception(self::FORMATTING_EXCEPTION);
         }
         $mappedFeeRule = array_map('intval', $feeRule);
 

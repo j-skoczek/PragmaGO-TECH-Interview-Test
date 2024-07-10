@@ -11,7 +11,7 @@ interface FeeRepositoryInterface
     /**
      * Read fee rules and return them in a formatted way
      *
-     * @param int $loadTerm
+     * @param int $loanTerm
      *
      * @return FeeRule[] array of fee rules with loan amounts as keys
      */

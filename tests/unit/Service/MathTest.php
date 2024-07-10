@@ -14,7 +14,7 @@ final class MathTest extends TestCase
     /**
      * @dataProvider interpolateProvider
      */
-    public function testInterpolate(int $search, int $x1, int $y1, int $x2, int $y2, int $expected)
+    public function testInterpolate(int $search, int $x1, int $y1, int $x2, int $y2, int $expected): void
     {
         $mathService = new Math();
         $result = $mathService->interpolate($search, $x1, $y1, $x2, $y2);
@@ -30,8 +30,11 @@ final class MathTest extends TestCase
 
     /**
      * @dataProvider findClosestValuesTooSmallHaystackProvider
+     *
+     * @param int $search
+     * @param int[] $haystack
      */
-    public function testFindClosestValuesTooSmallHaystack(float $search, array $haystack)
+    public function testFindClosestValuesTooSmallHaystack(int $search, array $haystack): void
     {
         $mathService = new Math();
         $this->expectException(Exception::class);
@@ -48,8 +51,12 @@ final class MathTest extends TestCase
 
     /**
      * @dataProvider findClosestValuesProvider
+     *
+     * @param int $search
+     * @param int[] $haystack
+     * @param int[] $expectedResult
      */
-    public function testFindClosestValues(float $search, array $haystack, $expectedResult)
+    public function testFindClosestValues(int $search, array $haystack, array $expectedResult): void
     {
         $mathService = new Math();
         $result = $mathService->findClosestValues($search, $haystack);

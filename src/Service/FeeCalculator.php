@@ -25,21 +25,30 @@ class FeeCalculator implements ServiceFeeCalculatorInterface
     /**
      * Calculate a fee for given LoanProposal based on given FeeRules
      *
-     * @param LoanProposal
-     * @param FeeRule[] an array of defined fee rules with keys as loan amounts
+     * @param LoanProposal $loanProposal
+     * @param FeeRule[] $feeRules an array of defined fee rules with keys as loan amounts
      *
      * @return float The calculated total fee.
      */
     public function calculateFee(LoanProposal $loanProposal, array $feeRules): float
     {
-        $closestDefinedAmounts = $this->mathService->findClosestValues($loanProposal->centesimalAmount(), array_keys($feeRules));
+        $closestDefinedAmounts = $this->mathService->findClosestValues(
+            $loanProposal->centesimalAmount(),
+            array_keys($feeRules)
+        );
 
         $lowerAmount = min($closestDefinedAmounts);
         $higherAmount = max($closestDefinedAmounts);
         $lowerFee = ($feeRules[$lowerAmount])->centesimalFee();
         $higherFee = ($feeRules[$higherAmount])->centesimalFee();
 
-        $interpolatedCentesimalFee = $this->mathService->interpolate($loanProposal->centesimalAmount(), $lowerAmount, $lowerFee, $higherAmount, $higherFee);
+        $interpolatedCentesimalFee = $this->mathService->interpolate(
+            $loanProposal->centesimalAmount(),
+            $lowerAmount,
+            $lowerFee,
+            $higherAmount,
+            $higherFee
+        );
 
         $centesimalFee = $this->roundFee($interpolatedCentesimalFee, $loanProposal->centesimalAmount());
 
@@ -69,7 +78,7 @@ class FeeCalculator implements ServiceFeeCalculatorInterface
     /**
      * Cast fee to a format XXXX.XX
      * @param int $centesimalFee
-     * 
+     *
      * @return float
      */
     protected function castFeeToCurrencyFormat(int $centesimalFee): float

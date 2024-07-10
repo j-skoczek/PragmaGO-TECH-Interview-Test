@@ -14,4 +14,4 @@
     -  Math is treated as a math function aggregator, so no interface for it. Should it need to grow a decision would have to be made if a new service will be created or if the old one will be extended.
  - index.php is used for debugging. Simple setup where all needed objects are created and injected to the controller.
  - tests are written using php unit and can be run using `composer test`
- - code is checked using php_codesniffer
+ - code is checked using php_codesniffer and phpstan

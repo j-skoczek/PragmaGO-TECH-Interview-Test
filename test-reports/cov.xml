@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1720610278">
-  <project timestamp="1720610278">
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Controller/FeeCalculator.php">
+<coverage generated="1720615350">
+  <project timestamp="1720615350">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Controller/FeeCalculator.php">
       <class name="PragmaGoTech\Interview\Controller\FeeCalculator" namespace="global">
         <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
       </class>
@@ -16,10 +16,10 @@
       <line num="39" type="stmt" count="1"/>
       <metrics loc="43" ncloc="38" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Controller/FeeCalculatorInterface.php">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Controller/FeeCalculatorInterface.php">
       <metrics loc="16" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Model/FeeRule.php">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Model/FeeRule.php">
       <class name="PragmaGoTech\Interview\Model\FeeRule" namespace="global">
         <metrics complexity="5" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="11" coveredelements="9"/>
       </class>
@@ -36,119 +36,131 @@
       <line num="56" type="stmt" count="3"/>
       <metrics loc="59" ncloc="39" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="11" coveredelements="9"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Model/LoanProposal.php">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Model/LoanProposal.php">
       <class name="PragmaGoTech\Interview\Model\LoanProposal" namespace="global">
-        <metrics complexity="14" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="25" coveredelements="25"/>
+        <metrics complexity="14" methods="8" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="16" elements="25" coveredelements="23"/>
       </class>
-      <line num="29" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
-      <line num="31" type="stmt" count="12"/>
-      <line num="32" type="stmt" count="5"/>
-      <line num="33" type="stmt" count="5"/>
-      <line num="39" type="method" name="validate" visibility="protected" complexity="1" crap="1" count="12"/>
-      <line num="41" type="stmt" count="12"/>
-      <line num="42" type="stmt" count="9"/>
-      <line num="43" type="stmt" count="8"/>
-      <line num="46" type="method" name="validateLoanAmount" visibility="protected" complexity="4" crap="4" count="12"/>
-      <line num="49" type="stmt" count="12"/>
-      <line num="50" type="stmt" count="10"/>
-      <line num="51" type="stmt" count="12"/>
-      <line num="53" type="stmt" count="3"/>
-      <line num="57" type="method" name="validateNumberOfDecimalDigits" visibility="protected" complexity="2" crap="2" count="9"/>
-      <line num="59" type="stmt" count="9"/>
-      <line num="60" type="stmt" count="1"/>
-      <line num="64" type="method" name="validateLoanTerm" visibility="protected" complexity="3" crap="3" count="8"/>
-      <line num="66" type="stmt" count="8"/>
-      <line num="67" type="stmt" count="3"/>
-      <line num="77" type="method" name="term" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="79" type="stmt" count="2"/>
-      <line num="87" type="method" name="amount" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="89" type="stmt" count="2"/>
-      <line num="97" type="method" name="centesimalAmount" visibility="public" complexity="1" crap="1" count="6"/>
-      <line num="99" type="stmt" count="6"/>
-      <metrics loc="102" ncloc="78" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="25" coveredelements="25"/>
+      <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
+      <line num="29" type="stmt" count="12"/>
+      <line num="30" type="stmt" count="5"/>
+      <line num="31" type="stmt" count="5"/>
+      <line num="40" type="method" name="validate" visibility="protected" complexity="1" crap="1" count="12"/>
+      <line num="42" type="stmt" count="12"/>
+      <line num="43" type="stmt" count="9"/>
+      <line num="44" type="stmt" count="8"/>
+      <line num="52" type="method" name="validateLoanAmount" visibility="protected" complexity="4" crap="4" count="12"/>
+      <line num="55" type="stmt" count="12"/>
+      <line num="56" type="stmt" count="10"/>
+      <line num="57" type="stmt" count="12"/>
+      <line num="59" type="stmt" count="3"/>
+      <line num="68" type="method" name="validateNumberOfDecimalDigits" visibility="protected" complexity="2" crap="2" count="9"/>
+      <line num="70" type="stmt" count="9"/>
+      <line num="71" type="stmt" count="1"/>
+      <line num="80" type="method" name="validateLoanTerm" visibility="protected" complexity="3" crap="3" count="8"/>
+      <line num="82" type="stmt" count="8"/>
+      <line num="83" type="stmt" count="3"/>
+      <line num="93" type="method" name="term" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="95" type="stmt" count="2"/>
+      <line num="103" type="method" name="amount" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="105" type="stmt" count="0"/>
+      <line num="113" type="method" name="centesimalAmount" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="115" type="stmt" count="8"/>
+      <metrics loc="118" ncloc="77" classes="1" methods="8" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="16" elements="25" coveredelements="23"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Repository/FeeRepository.php">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Repository/FeeRepository.php">
       <class name="PragmaGoTech\Interview\Repository\FeeRepository" namespace="global">
-        <metrics complexity="6" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="21" coveredelements="21"/>
+        <metrics complexity="6" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="22" coveredelements="22"/>
       </class>
-      <line num="24" type="method" name="getFeeRules" visibility="public" complexity="2" crap="2" count="5"/>
-      <line num="26" type="stmt" count="5"/>
-      <line num="27" type="stmt" count="5"/>
-      <line num="28" type="stmt" count="5"/>
-      <line num="29" type="stmt" count="4"/>
+      <line num="26" type="method" name="getFeeRules" visibility="public" complexity="2" crap="2" count="6"/>
+      <line num="28" type="stmt" count="6"/>
+      <line num="29" type="stmt" count="6"/>
+      <line num="30" type="stmt" count="5"/>
       <line num="31" type="stmt" count="4"/>
       <line num="33" type="stmt" count="4"/>
-      <line num="43" type="method" name="readFeeRulesFile" visibility="private" complexity="1" crap="1" count="5"/>
-      <line num="45" type="stmt" count="5"/>
-      <line num="46" type="stmt" count="3"/>
-      <line num="47" type="stmt" count="2"/>
-      <line num="48" type="stmt" count="5"/>
-      <line num="49" type="stmt" count="5"/>
-      <line num="59" type="method" name="formatFeeRule" visibility="private" complexity="3" crap="3" count="5"/>
-      <line num="61" type="stmt" count="5"/>
-      <line num="63" type="stmt" count="5"/>
+      <line num="35" type="stmt" count="4"/>
+      <line num="45" type="method" name="readFeeRulesFile" visibility="protected" complexity="1" crap="1" count="6"/>
+      <line num="47" type="stmt" count="6"/>
+      <line num="48" type="stmt" count="3"/>
+      <line num="49" type="stmt" count="2"/>
+      <line num="50" type="stmt" count="1"/>
+      <line num="51" type="stmt" count="6"/>
+      <line num="52" type="stmt" count="5"/>
+      <line num="62" type="method" name="formatFeeRule" visibility="protected" complexity="3" crap="3" count="5"/>
       <line num="64" type="stmt" count="5"/>
-      <line num="65" type="stmt" count="5"/>
-      <line num="66" type="stmt" count="1"/>
-      <line num="68" type="stmt" count="4"/>
-      <line num="70" type="stmt" count="4"/>
-      <metrics loc="73" ncloc="51" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="21" coveredelements="21"/>
+      <line num="67" type="stmt" count="5"/>
+      <line num="68" type="stmt" count="5"/>
+      <line num="69" type="stmt" count="5"/>
+      <line num="70" type="stmt" count="1"/>
+      <line num="72" type="stmt" count="4"/>
+      <line num="74" type="stmt" count="4"/>
+      <metrics loc="77" ncloc="55" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="22" coveredelements="22"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Repository/FeeRepositoryInterface.php">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Repository/FeeRepositoryInterface.php">
       <metrics loc="20" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Service/FeeCalculator.php">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Service/FeeCalculator.php">
       <class name="PragmaGoTech\Interview\Service\FeeCalculator" namespace="global">
-        <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="17" coveredelements="17"/>
+        <metrics complexity="5" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="28" coveredelements="28"/>
       </class>
       <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
       <line num="22" type="stmt" count="3"/>
       <line num="33" type="method" name="calculateFee" visibility="public" complexity="1" crap="1" count="3"/>
       <line num="35" type="stmt" count="3"/>
+      <line num="36" type="stmt" count="3"/>
       <line num="37" type="stmt" count="3"/>
       <line num="38" type="stmt" count="3"/>
-      <line num="39" type="stmt" count="3"/>
       <line num="40" type="stmt" count="3"/>
+      <line num="41" type="stmt" count="3"/>
       <line num="42" type="stmt" count="3"/>
-      <line num="44" type="stmt" count="3"/>
+      <line num="43" type="stmt" count="3"/>
+      <line num="45" type="stmt" count="3"/>
+      <line num="46" type="stmt" count="3"/>
       <line num="47" type="stmt" count="3"/>
-      <line num="58" type="method" name="roundFee" visibility="private" complexity="2" crap="2" count="3"/>
-      <line num="60" type="stmt" count="3"/>
-      <line num="62" type="stmt" count="3"/>
-      <line num="63" type="stmt" count="1"/>
-      <line num="65" type="stmt" count="2"/>
-      <line num="66" type="stmt" count="2"/>
-      <metrics loc="70" ncloc="50" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="17" coveredelements="17"/>
+      <line num="48" type="stmt" count="3"/>
+      <line num="49" type="stmt" count="3"/>
+      <line num="50" type="stmt" count="3"/>
+      <line num="51" type="stmt" count="3"/>
+      <line num="53" type="stmt" count="3"/>
+      <line num="55" type="stmt" count="3"/>
+      <line num="66" type="method" name="roundFee" visibility="protected" complexity="2" crap="2" count="3"/>
+      <line num="68" type="stmt" count="3"/>
+      <line num="70" type="stmt" count="3"/>
+      <line num="71" type="stmt" count="1"/>
+      <line num="73" type="stmt" count="2"/>
+      <line num="74" type="stmt" count="2"/>
+      <line num="84" type="method" name="castFeeToCurrencyFormat" visibility="protected" complexity="1" crap="1" count="3"/>
+      <line num="86" type="stmt" count="3"/>
+      <metrics loc="89" ncloc="64" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="28" coveredelements="28"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Service/FeeCalculatorInterface.php">
-      <metrics loc="16" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Service/FeeCalculatorInterface.php">
+      <metrics loc="20" ncloc="14" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/home/skoczek/PhpProjects/pragmago/src/Service/Math.php">
+    <file name="/home/skoczek/PhpProjects/PragmaGO-TECH-Interview-Test/src/Service/Math.php">
       <class name="PragmaGoTech\Interview\Service\Math" namespace="global">
         <metrics complexity="8" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
       </class>
-      <line num="24" type="method" name="interpolate" visibility="public" complexity="1" crap="1" count="3"/>
-      <line num="26" type="stmt" count="3"/>
+      <line num="25" type="method" name="interpolate" visibility="public" complexity="1" crap="1" count="3"/>
       <line num="27" type="stmt" count="3"/>
-      <line num="38" type="method" name="findClosestValues" visibility="public" complexity="3" crap="3" count="6"/>
-      <line num="40" type="stmt" count="6"/>
-      <line num="41" type="stmt" count="3"/>
+      <line num="28" type="stmt" count="3"/>
+      <line num="39" type="method" name="findClosestValues" visibility="public" complexity="3" crap="3" count="6"/>
+      <line num="41" type="stmt" count="6"/>
       <line num="42" type="stmt" count="3"/>
-      <line num="43" type="stmt" count="1"/>
-      <line num="46" type="stmt" count="2"/>
-      <line num="49" type="stmt" count="2"/>
+      <line num="43" type="stmt" count="3"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="47" type="stmt" count="2"/>
       <line num="50" type="stmt" count="2"/>
-      <line num="53" type="stmt" count="2"/>
+      <line num="51" type="stmt" count="2"/>
       <line num="54" type="stmt" count="2"/>
-      <line num="56" type="stmt" count="2"/>
-      <line num="67" type="method" name="getClosest" visibility="private" complexity="4" crap="4" count="2"/>
-      <line num="69" type="stmt" count="2"/>
+      <line num="55" type="stmt" count="2"/>
+      <line num="57" type="stmt" count="2"/>
+      <line num="68" type="method" name="getClosest" visibility="protected" complexity="4" crap="4" count="2"/>
       <line num="70" type="stmt" count="2"/>
       <line num="71" type="stmt" count="2"/>
       <line num="72" type="stmt" count="2"/>
-      <line num="75" type="stmt" count="2"/>
-      <metrics loc="78" ncloc="49" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
+      <line num="73" type="stmt" count="2"/>
+      <line num="76" type="stmt" count="2"/>
+      <metrics loc="79" ncloc="50" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
     </file>
-    <metrics files="9" loc="477" ncloc="342" classes="6" methods="24" coveredmethods="23" conditionals="0" coveredconditionals="0" statements="79" coveredstatements="78" elements="103" coveredelements="101"/>
+    <metrics files="9" loc="521" ncloc="361" classes="6" methods="25" coveredmethods="23" conditionals="0" coveredconditionals="0" statements="90" coveredstatements="88" elements="115" coveredelements="111"/>
   </project>
 </coverage>

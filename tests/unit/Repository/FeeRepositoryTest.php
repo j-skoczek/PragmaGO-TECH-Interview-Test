@@ -38,8 +38,13 @@ final class FeeRepositoryTest extends TestCase
 
     /**
      * @dataProvider validateProvider
+     *
+     * @param int $term
+     * @param int $centesimalAmount
+     * @param float $expectedFee
+     * @param int[] $expectedOrder
      */
-    public function testGetFeeRules(int $term, int $centesimalAmount, float $expectedFee, array $expectedOrder)
+    public function testGetFeeRules(int $term, int $centesimalAmount, float $expectedFee, array $expectedOrder): void
     {
         $feeRepository = new FeeRepository();
         $feeRules = $feeRepository->getFeeRules($term);
@@ -59,15 +64,33 @@ final class FeeRepositoryTest extends TestCase
         yield [24, 120000, 60, [100000, 120000]];
     }
 
-    public function testBadlyFormattedFeeRules()
+    /**
+     * @dataProvider getFeeRulesExceptionsGenerator
+     */
+    public function testGetFeeRulesExceptions(string $path, string $expectedException, int $term): void
     {
         file_put_contents(
-            dirname(__FILE__) . FeeRepository::TWELVE_MONTH_FEES_PATH,
+            dirname(__FILE__) . $path,
             'test'
         );
+
         $feeRepository = new FeeRepository();
         $this->expectException(Exception::class);
-        $this->expectExceptionMessage(FeeRepository::EXCEPTION_MESSAGE);
-        $feeRepository->getFeeRules(12);
+        $this->expectExceptionMessage($expectedException);
+        $feeRepository->getFeeRules($term);
+    }
+
+    public static function getFeeRulesExceptionsGenerator(): Generator
+    {
+        yield [
+            FeeRepository::TWELVE_MONTH_FEES_PATH,
+            FeeRepository::FORMATTING_EXCEPTION,
+            12
+        ];
+        yield [
+            FeeRepository::TWELVE_MONTH_FEES_PATH,
+            FeeRepository::TERM_EXCEPTION,
+            10
+        ];
     }
 }

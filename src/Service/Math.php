@@ -9,6 +9,7 @@ use Exception;
 class Math
 {
     const HAYSTACK_TOO_SMALL = 'haystack needs have at least two values';
+    const NO_MATCHES = 'no matches were found';
 
     /**
      * Use linear interpolation to find a value for given search. Result is rounded up to the nearest int
@@ -30,12 +31,12 @@ class Math
     /**
      * Find two values closest to search in an array. In case two values are equidistant the lower one is returned
      *
-     * @param float $search
+     * @param int $search
      * @param int[] $haystack array of ints
      *
      * @return int[] array with two closest values
      */
-    public function findClosestValues(float $search, array $haystack): array
+    public function findClosestValues(int $search, array $haystack): array
     {
         if (sizeof($haystack) < 2) {
             throw new Exception(self::HAYSTACK_TOO_SMALL);
@@ -59,12 +60,12 @@ class Math
     /**
      * Find closest value in array for given search if two values are equidistant the lower one is returned
      *
-     * @param float $search
+     * @param int $search
      * @param int[] $arr
      *
      * @return int
      */
-    protected function getClosest($search, $arr): int
+    protected function getClosest(int $search, array $arr): int
     {
         $closest = null;
         foreach ($arr as $value) {
@@ -72,6 +73,6 @@ class Math
                 $closest = $value;
             }
         }
-        return $closest;
+        return $closest ?? throw new Exception(self::NO_MATCHES);
     }
 }

@@ -33,8 +33,8 @@ class FeeCalculator implements FeeCalculatorInterface
     {
         $feeRules = $this->feeRepository->getFeeRules($this->loanProposal->term());
 
-        if (array_key_exists($this->loanProposal->amount(), $feeRules)) {
-            return ($feeRules[$this->loanProposal->amount()])->fee();
+        if (array_key_exists($this->loanProposal->centesimalAmount(), $feeRules)) {
+            return ($feeRules[$this->loanProposal->centesimalAmount()])->fee();
         } else {
             return $this->feeCalculatorService->calculateFee($this->loanProposal, $feeRules);
         }

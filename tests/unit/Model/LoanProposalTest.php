@@ -14,13 +14,13 @@ final class LoanProposalTest extends TestCase
     /**
      * @dataProvider gettersProvider
      */
-    public function testGetters(int $term, float $amount, int $expectedCentesimal)
+    public function testGetters(int $term, float $amount, int $expectedCentesimal): void
     {
         $loanProposal = new LoanProposal($term, $amount);
         $this->assertEquals($expectedCentesimal, $loanProposal->centesimalAmount());
     }
 
-    static function gettersProvider()
+    static function gettersProvider(): Generator
     {
         yield [12, 1500.00, 150000];
         yield [12, 1500.30, 150030];
@@ -30,7 +30,7 @@ final class LoanProposalTest extends TestCase
     /**
      * @dataProvider validateProvider
      */
-    public function testValidate(int $term, float $amount, string $expectedExceptionMessage)
+    public function testValidate(int $term, float $amount, string $expectedExceptionMessage): void
     {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage($expectedExceptionMessage);

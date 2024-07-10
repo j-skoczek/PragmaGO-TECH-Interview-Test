@@ -28,7 +28,7 @@ final class FeeCalculatorTest extends TestCase
      * @dataProvider loanProposalProvider
      * @coversNothing
      */
-    public function testCalculate(int $term, float $amount, float $expectedFee)
+    public function testCalculate(int $term, float $amount, float $expectedFee): void
     {
         $calculator = $this->getCalculator($term, $amount);
         $actualFee = $calculator->calculateFee();

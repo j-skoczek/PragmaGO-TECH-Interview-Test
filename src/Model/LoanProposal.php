@@ -33,6 +33,9 @@ class LoanProposal
 
     /**
      * Validate data for value object
+     *
+     * @param int $term
+     * @param float $amount
      */
     protected function validate(int $term, float $amount): void
     {
@@ -41,6 +44,11 @@ class LoanProposal
         $this->validateLoanTerm($term);
     }
 
+    /**
+     * Check if loan amount is withing given range
+     *
+     * @param float $amount
+     */
     protected function validateLoanAmount(float $amount): void
     {
         if (
@@ -52,6 +60,11 @@ class LoanProposal
         }
     }
 
+    /**
+     * Check if loan amount is in XXX.XX format
+     *
+     * @param float $amount
+     */
     protected function validateNumberOfDecimalDigits(float $amount): void
     {
         if (strpos(strrev((string) $amount), ".") > 2) {
@@ -59,6 +72,11 @@ class LoanProposal
         }
     }
 
+    /**
+     * Check if loan term is within given set
+     *
+     * @param int $term
+     */
     protected function validateLoanTerm(int $term): void
     {
         if ($term !== $this->minLoanTerm && $term !== $this->maxLoanTerm) {

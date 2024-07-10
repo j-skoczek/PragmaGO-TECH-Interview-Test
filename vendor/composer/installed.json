@@ -763,6 +763,67 @@
             "install-path": "../phar-io/version"
         },
         {
+            "name": "phpstan/phpstan",
+            "version": "1.11.7",
+            "version_normalized": "1.11.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "52d2bbfdcae7f895915629e4694e9497d0f8e28d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/52d2bbfdcae7f895915629e4694e9497d0f8e28d",
+                "reference": "52d2bbfdcae7f895915629e4694e9497d0f8e28d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "time": "2024-07-06T11:17:41+00:00",
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../phpstan/phpstan"
+        },
+        {
             "name": "phpunit/php-code-coverage",
             "version": "10.1.15",
             "version_normalized": "10.1.15.0",
@@ -1100,17 +1161,17 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.25",
-            "version_normalized": "10.5.25.0",
+            "version": "10.5.26",
+            "version_normalized": "10.5.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "831bf82312be6037e811833ddbea0b8de60ea314"
+                "reference": "42e2f13ceaa2e34461bc89bea75407550b40b2aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/831bf82312be6037e811833ddbea0b8de60ea314",
-                "reference": "831bf82312be6037e811833ddbea0b8de60ea314",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/42e2f13ceaa2e34461bc89bea75407550b40b2aa",
+                "reference": "42e2f13ceaa2e34461bc89bea75407550b40b2aa",
                 "shasum": ""
             },
             "require": {
@@ -1144,7 +1205,7 @@
             "suggest": {
                 "ext-soap": "To be able to generate mocks based on WSDL files"
             },
-            "time": "2024-07-03T05:49:17+00:00",
+            "time": "2024-07-08T05:30:46+00:00",
             "bin": [
                 "phpunit"
             ],
@@ -1184,7 +1245,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.25"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.26"
             },
             "funding": [
                 {
@@ -4346,21 +4407,40 @@
     ],
     "dev": true,
     "dev-package-names": [
+        "clue/ndjson-react",
+        "composer/pcre",
+        "composer/semver",
+        "composer/xdebug-handler",
+        "evenement/evenement",
+        "fidry/cpu-core-counter",
+        "friendsofphp/php-cs-fixer",
         "myclabs/deep-copy",
         "nikic/php-parser",
         "phar-io/manifest",
         "phar-io/version",
+        "phpstan/phpstan",
         "phpunit/php-code-coverage",
         "phpunit/php-file-iterator",
         "phpunit/php-invoker",
         "phpunit/php-text-template",
         "phpunit/php-timer",
         "phpunit/phpunit",
+        "psr/container",
+        "psr/event-dispatcher",
+        "psr/log",
+        "react/cache",
+        "react/child-process",
+        "react/dns",
+        "react/event-loop",
+        "react/promise",
+        "react/socket",
+        "react/stream",
         "sebastian/cli-parser",
         "sebastian/code-unit",
         "sebastian/code-unit-reverse-lookup",
         "sebastian/comparator",
         "sebastian/complexity",
+        "sebastian/diff",
         "sebastian/environment",
         "sebastian/exporter",
         "sebastian/global-state",
@@ -4370,6 +4450,24 @@
         "sebastian/recursion-context",
         "sebastian/type",
         "sebastian/version",
+        "squizlabs/php_codesniffer",
+        "symfony/console",
+        "symfony/deprecation-contracts",
+        "symfony/event-dispatcher",
+        "symfony/event-dispatcher-contracts",
+        "symfony/filesystem",
+        "symfony/finder",
+        "symfony/options-resolver",
+        "symfony/polyfill-ctype",
+        "symfony/polyfill-intl-grapheme",
+        "symfony/polyfill-intl-normalizer",
+        "symfony/polyfill-mbstring",
+        "symfony/polyfill-php80",
+        "symfony/polyfill-php81",
+        "symfony/process",
+        "symfony/service-contracts",
+        "symfony/stopwatch",
+        "symfony/string",
         "theseer/tokenizer"
     ]
 }

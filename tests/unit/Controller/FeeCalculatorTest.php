@@ -14,6 +14,12 @@ use PragmaGoTech\Interview\Service\FeeCalculator as FeeCalculatorService;
 
 final class FeeCalculatorTest extends TestCase
 {
+    /**
+     * @param int $term
+     * @param float $amount
+     * @param FeeRule[] $feeRules
+     * @param float $calculatedFee
+     */
     protected function getCalculator(int $term, float $amount, array $feeRules, float $calculatedFee): FeeCalculator
     {
         $loanProposal = new LoanProposal($term, $amount);
@@ -29,8 +35,14 @@ final class FeeCalculatorTest extends TestCase
 
     /**
      * @dataProvider validateProvider
+     *
+     * @param int $term
+     * @param float $amount
+     * @param FeeRule[] $feeRules
+     * @param float $calculatedFee
+     * @param float $expectedFee
      */
-    public function testValidate(int $term, float $amount, array $feeRules, float $calculatedFee, float $expectedFee)
+    public function testValidate(int $term, float $amount, array $feeRules, float $calculatedFee, float $expectedFee): void
     {
         $calculator = $this->getCalculator($term, $amount, $feeRules, $calculatedFee);
         $actualFee = $calculator->calculateFee();
@@ -42,7 +54,7 @@ final class FeeCalculatorTest extends TestCase
         yield 'exact rule is found' => [
             12,
             1000,
-            [1000 => new FeeRule(1000, 50)],
+            [100000 => new FeeRule(1000, 50)],
             0,
             50
         ];

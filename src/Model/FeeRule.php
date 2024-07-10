@@ -39,7 +39,7 @@ class FeeRule
     /**
      * Fee for given loan amount.
      *
-     * @return float
+     * @return int
      */
     public function fee(): int
     {
